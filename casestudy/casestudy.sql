@@ -1,5 +1,5 @@
 CREATE TABLE Patients (
-    patient_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    patient_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     first_name TEXT,
     last_name TEXT,
     date_of_birth DATE,
@@ -25,7 +25,7 @@ values
 
 
     CREATE TABLE Medical_History (
-    history_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    history_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     patient_id INTEGER,
     diagnosis TEXT,
     allergies TEXT,
@@ -43,7 +43,7 @@ INSERT INTO Medical_History (history_id, diagnosis,allergies,medications,previou
 
 
 CREATE TABLE Encounters (
-    encounter_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    encounter_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     patient_id INTEGER,
     appointment_date DATE,
     admission_date DATE,
@@ -61,7 +61,7 @@ INSERT INTO Encounters(encounter_id,patient_id,appoiintment_date,admission_date,
 
 
 CREATE TABLE Diagnosis_Tests (
-    test_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    test_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     patient_id INTEGER,
     test_type TEXT,
     result TEXT,
@@ -84,7 +84,7 @@ INSERT INTO Diagnosis_Tests (patient_id, test_type, result, test_date) VALUES
 ;
 
 CREATE TABLE Doctors (
-    doctor_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    doctor_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     name TEXT,
     specialty TEXT,
     contact TEXT,
@@ -99,7 +99,7 @@ values
 
 
 CREATE TABLE Prescriptions (
-    prescription_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    prescription_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     patient_id INTEGER,
     doctor_id INTEGER,
     medication TEXT,
@@ -119,7 +119,7 @@ values
 (5, 5, 1, 'Ibuprofen', '400mg', 'Twice daily', 'Strip', '2023-05-26');
  
 CREATE TABLE Procedures (
-    procedure_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    procedure_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     patient_id INTEGER,
     procedure_name TEXT,
     procedure_date DATE,
@@ -133,4 +133,5 @@ INSERT INTO Procedures (patient_id, procedure_name, procedure_date, doctor_id, n
     (2, "Bronchoscopy", "2023-02-24", 2, "No obstruction found"),
     (3, "Insulin Pump Installation", "2023-03-09", 1, "Patient trained"),
     (4, "Cognitive Behavioral Therapy", "2023-04-17", 2, "10 sessions planned"),
+
     (5, "Arthroscopy", "2023-05-26", 1, "Rehab advised")
