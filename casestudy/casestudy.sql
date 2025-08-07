@@ -92,8 +92,8 @@ CREATE TABLE Doctors (
 )
 insert into doctors(name,specialty,contact,license_number)
 values
- ("Dr. Emily White", "Cardiology", "123-555-1111", "LIC12345"),
-    ("Dr. Mark Green", "Neurology", "123-555-2222", "LIC67890")
+ ("Dr. A Patil", "Cardiology", "123-555-1111", "LIC12345"),
+    ("Dr. D Gandhi", "Neurology", "123-555-2222", "LIC67890")
 
 
 
@@ -135,3 +135,4 @@ INSERT INTO Procedures (patient_id, procedure_name, procedure_date, doctor_id, n
     (4, "Cognitive Behavioral Therapy", "2023-04-17", 2, "10 sessions planned"),
 
     (5, "Arthroscopy", "2023-05-26", 1, "Rehab advised")
+
